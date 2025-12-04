@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="/static/style.css">
+    </head>
+    <body>
+        <nav>
+            <a href="/">Home</a>
+        </nav>
+
+        <div class="container">
+            <h2>Track Package</h2>
+
+            <form method="POST">
+            <label>Tracking Number:</label>
+            <input type="text" name="tracking" required><br><br>
+            <button type="submit">Track</button>
+            </form>
+            {% if package %}
+            <h3>Status: {{ package.status }}</h3>
+            <p>Delivery Date: {{ package.delivery_date }}</p>
+            {% endif %}
+        </div>
+    </body>
+</html>

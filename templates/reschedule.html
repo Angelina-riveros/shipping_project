@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="/static/style.css">
+<title>Reschedule Delivery</title>
+</head>
+<body>
+
+<nav>
+<a href="/">Home</a>
+<a href="/tracking">Track Package</a>
+</nav>
+
+<div class="container">
+<h2>Reschedule Delivery</h2>
+
+<form method="POST">
+
+<label>Tracking Number:</label><br>
+<input type="text" name="tracking" required><br><br>
+
+<label>New Delivery Date:</label><br>
+<input type="date" name="date" required><br><br>
+
+<button type="submit">Submit</button>
+</form>
+
+{% if message %}
+<h3>{{ message }}</h3>
+{% endif %}
+</div>
+
+</body>
+</html>

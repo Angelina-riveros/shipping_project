@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="/static/style.css">
+<title>Shipments</title>
+</head>
+<body>
+
+<nav>
+<a href="/">Home</a>
+<a href="/shipments">Shipments</a>
+</nav>
+
+<div class="container">
+<h2>Shipment Records</h2>
+
+<table border="1" cellpadding="8">
+<tr>
+<th>Shipment ID</th>
+<th>Tracking Number</th>
+<th>Status</th>
+</tr>
+
+{% for s in shipments %}
+<tr>
+<td>{{ s.shipment_id }}</td>
+<td>{{ s.tracking }}</td>
+<td>{{ s.status }}</td>
+</tr>
+{% endfor %}
+</table>
+</div>
+
+</body>
+</html>

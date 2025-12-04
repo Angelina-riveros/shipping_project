@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="/static/style.css">
+<title>Inquiries</title>
+</head>
+<body>
+
+<nav>
+<a href="/">Home</a>
+<a href="/inquiries">Inquiries</a>
+</nav>
+
+<div class="container">
+<h2>Customer Inquiries</h2>
+
+<table border="1" cellpadding="8">
+<tr>
+<th>ID</th>
+<th>Message</th>
+<th>Status</th>
+</tr>
+
+{% for q in inquiries %}
+<tr>
+<td>{{ q.id }}</td>
+<td>{{ q.message }}</td>
+<td>{{ q.status }}</td>
+</tr>
+{% endfor %}
+</table>
+</div>
+
+</body>
+</html>

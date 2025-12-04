@@ -1,0 +1,94 @@
+body {
+font-family: Arial, sans-serif;
+background: #f2f2f2;
+margin: 0;
+padding: 0;
+}
+
+nav {
+background: #333;
+padding: 10px;
+}
+
+nav a {
+color: white;
+margin-right: 15px;
+text-decoration: none;
+}
+
+.container {
+max-width: 900px;
+margin: 50px auto;
+padding: 20px;
+background: white;
+border-radius: 8px;
+}
+/* Pink & Brown theme */
+:root {
+	--bg: #fff6f4; /* soft cream/pink */
+	--card: #fffdfb;
+	--brown: #5b3a29; /* warm brown */
+	--brown-2: #7a553f;
+	--rose: #ff9fb8; /* light pink */
+	--accent: #f6c2d6;
+	--muted: #6b5b57;
+}
+
+body {
+	font-family: 'Nunito', system-ui, -apple-system, 'Segoe UI', Roboto, Arial;
+	background: linear-gradient(180deg, var(--bg) 0%, #fffaf6 60%);
+	color: var(--brown-2);
+}
+
+nav {
+	display: flex;
+	gap: 10px;
+	justify-content: center;
+	padding: 18px 12px;
+}
+
+nav a {
+	text-decoration: none;
+	color: var(--card);
+	background: linear-gradient(90deg, var(--brown), var(--brown-2));
+	padding: 8px 14px;
+	border-radius: 999px;
+	box-shadow: 0 8px 20px rgba(91,58,41,0.08);
+	font-weight: 600;
+}
+
+nav a:hover {
+	transform: translateY(-3px);
+	transition: transform 150ms ease;
+}
+
+.container {
+	max-width: 1000px;
+	margin: 40px auto;
+	padding: 28px;
+	background: var(--card);
+	border-radius: 14px;
+	box-shadow: 0 10px 30px rgba(90,64,54,0.06);
+}
+
+.hero { display:flex; gap:18px; align-items:center }
+.logo {
+	font-size: 2.6rem;
+	background: linear-gradient(180deg, var(--rose), var(--accent));
+	width:64px; height:64px; display:inline-flex; align-items:center; justify-content:center;
+	border-radius:12px; box-shadow:0 8px 20px rgba(255,159,184,0.12);
+}
+
+h1 { margin:0; font-size:2rem }
+p { color:var(--muted); margin-top:8px }
+
+/* Forms and buttons */
+input, select, textarea { padding:10px; border-radius:10px; border:1px solid #f0e6e6; width:100%; }
+button, .btn { background: linear-gradient(90deg, var(--rose), #ff86a6); color:#fff; border:none; padding:10px 14px; border-radius:12px; font-weight:700 }
+
+footer { text-align:center; color:var(--muted); margin-top:32px }
+
+@media (max-width:720px) {
+	.hero { flex-direction:column; align-items:flex-start }
+	nav { flex-wrap:wrap }
+}

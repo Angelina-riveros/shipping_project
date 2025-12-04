@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="/static/style.css">
+<title>Vehicles</title>
+</head>
+<body>
+
+<nav>
+<a href="/">Home</a>
+<a href="/vehicles">Vehicles</a>
+</nav>
+
+<div class="container">
+<h2>Vehicle Fleet</h2>
+
+<table border="1" cellpadding="8">
+<tr>
+<th>Vehicle ID</th>
+<th>Model</th>
+<th>Status</th>
+</tr>
+
+{% for v in vehicles %}
+<tr>
+<td>{{ v.vehicle_id }}</td>
+<td>{{ v.model }}</td>
+<td>{{ v.status }}</td>
+</tr>
+{% endfor %}
+</table>
+
+</div>
+
+</body>
+</html>
